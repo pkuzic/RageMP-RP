@@ -1,3 +1,12 @@
+#RageMP files, folders and cache
+bin
+CustomCharacters
+dotnet
+BugTrap-x64.dll
+conf.json
+linux_x64.tar.gz
+ragemp-server.exe
+
 # Logs
 logs
 *.log
