@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+
+        <script src="assets/js/jquery-3.2.1.js"></script>
+        <script src="assets/js/bootstrap.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="main-container">
+                <h1 class="display-4">Выбор персонажа</h1>
+                <p class="lead">На данном этапе Вы можете создать нового персонажа, либо продолжить игру за уже существующего.</p>
+                <hr class="my-4">
+
+                <center><div class="spinner-border" id="spinner-progress"></div></center>
+
+                <div class="alert alert-danger first-slot-available" role="alert">
+                    <i class="fas fa-exclamation-circle"></i> ОШИБКА: Прежде чем создать персонажа на втором слоте, нужно занять первый.
+                </div>
+                <div class="alert alert-danger second-slot-available" role="alert">
+                    <i class="fas fa-exclamation-circle"></i> ОШИБКА: Прежде чем создать персонажа на третьем слоте, нужно занять первый и второй.
+                </div>
+                <div class="alert alert-danger other-reason" role="alert">
+                    <i class="fas fa-exclamation-circle"></i> ОШИБКА: Невозможно занять слот.
+                </div>
+
+
+                <div class="container">
+                    <div class="row align-items-start">
+                        <div class="col" id="firstCharacter-card">
+                            <div class="card">
+                                <img class="img-fluid" src="character.png">
+                                <div class="card-body">
+                                    <h5 class="card-title"><var id="character-1-name">John Doe</var></h5>
+                                    <h6 class="card-subtitle mb-2 text-muted"><var id="character-1-role">Свободный слот персонажа</var></h6>
+                                    <a href="#" class="btn btn-dark btn-lg btn-block" id="character-1" onclick="sendPreferredCharacter(1);">Выбрать</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col" id="secondCharacter-card">
+                            <div class="card">
+                                <img class="img-fluid" src="character.png">
+                                <div class="card-body">
+                                    <h5 class="card-title"><var id="character-2-name">Jane Doe</var></h5>
+                                    <h6 class="card-subtitle mb-2 text-muted"><var id="character-2-role">Свободный слот персонажа</var></h6>
+                                    <a href="#" class="btn btn-dark btn-lg btn-block" id="character-2" onclick="sendPreferredCharacter(2);">Выбрать</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col" id="thirdCharacter-card">
+                            <div class="card">
+                                <img class="img-fluid" src="character.png">
+                                <div class="card-body">
+                                    <h5 class="card-title"><var id="character-3-name">Richard Roe</var></h5>
+                                    <h6 class="card-subtitle mb-2 text-muted"><var id="character-3-role">Свободный слот персонажа</var></h6>
+                                    <a href="#" class="btn btn-dark btn-lg btn-block" id="character-3" onclick="sendPreferredCharacter(3);">Выбрать</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="assets/js/main.js"></script>
+        <script type="text/javascript">
+            $('.alert-danger').hide();
+            $('#spinner-progress').hide();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+html body {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+body .container {
+    margin-top:3%;
+}
+
+var {
+    font-style: normal;
+}
+
+.main-container {
+    padding: 3rem;
+    background: rgba(229, 229, 229, 0.8);
+    
+    --notchSize: 20px;
+    
+    clip-path: 
+      polygon(
+        0% var(--notchSize), 
+        var(--notchSize) 0%, 
+        calc(100% - var(--notchSize)) 0%, 
+        100% var(--notchSize), 
+        100% calc(100% - var(--notchSize)), 
+        calc(100% - var(--notchSize)) 100%, 
+        var(--notchSize) 100%, 
+        0% calc(100% - var(--notchSize))
+      );
+  }
+  

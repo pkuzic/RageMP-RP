@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+
+        <script src="assets/js/jquery-3.2.1.js"></script>
+        <script src="assets/js/bootstrap.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="main-container">
+                <h1 class="display-4">Создание персонажа</h1>
+                <p class="lead">На данном этапе Вы можете кастомизировать своего персонажа, придав ему индивидуальности.</p>
+                <p class="lead" id="first-character-tooltip">Учтите, что поскольку это Ваш первый персонаж, он будет иметь куда более лучшие стартовые позиции в отношении потенциальных вторых и третьих персонажей. Отнеситесь к созданию персонажа с полной тщательностью, поскольку Вы не сможете обратить изменения после данного этапа.</p>
+                <hr class="my-4">
+
+                <center><div class="spinner-border" id="spinner-progress"></div></center>
+
+                <div class="container">
+                    <a href="#" class="btn btn-dark btn-lg btn-block" id="readyBtn-default" onclick="sendReadyState(0);">Поехали!</a>
+                    <a href="#" class="btn btn-dark btn-lg btn-block" id="readyBtn-newbie" onclick="sendReadyState(1);">Поехали!</a>
+
+                </div>
+            </div>
+        </div>
+        <script src="assets/js/main.js"></script>
+        <script type="text/javascript">
+            $('.alert-danger').hide();
+            $('#spinner-progress').hide();
+            $('#readyBtn-default').hide();
+            $('#readyBtn-newbie').hide();
+        </script>
+    </body>
+</html>
